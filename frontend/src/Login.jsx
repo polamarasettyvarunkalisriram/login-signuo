@@ -37,7 +37,7 @@ const Login = () => {
           <div className='mb-2 text-white '>
             <div className='d-flex justify-content-between fw-bold'>
               <label>Password</label>
-              <a href='#' className='text-decoration-none text-info'>Forgot Password?</a>
+              <a href='/home' className='text-decoration-none text-info'>Forgot Password?</a>
             </div>
             <input type='password' className='form-control' placeholder='Enter your password' value={login.password} onChange={(e) => setlogin({ ...login, password: e.target.value })} />
           </div>
