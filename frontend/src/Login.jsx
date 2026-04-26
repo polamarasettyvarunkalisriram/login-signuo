@@ -19,33 +19,7 @@ const Login = () => {
         localStorage.setItem("token",result.token)
         setlogin({ email: "", password: "" })
       })
-      const loginform = (e) => {
-  e.preventDefault();
-
-  fetch('http://localhost:7000/login', {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(login)
-  })
-    .then((res) => res.json())
-    .then((result) => {
-      if (result.token) {
-        alert("Login Successful");
-
-        localStorage.setItem("token", result.token);
-        setlogin({ email: "", password: "" });
-
-      } else {
-        alert(result.message || "Login Failed");
-      }
-    })
-  .catch((err) => {
-  if (err.message === "Token expired") {
-    localStorage.removeItem("token");
-    alert("Session expired, please login again");
-  }
-});
-};
+ 
   }
   return (
     <div className=' d-flex justify-content-center align-items-center min-vh-100 hii'>
